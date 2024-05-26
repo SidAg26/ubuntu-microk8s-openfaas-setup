@@ -26,3 +26,8 @@ GATEWAY_IP=$(hostname -I | awk '{print $1}')
 echo "export OPENFAAS_URL=\"http://$GATEWAY_IP:31112\"" >> ~/.bashrc
 # Install faas-cli
 curl -sSL https://cli.openfaas.com | sudo sh
+
+# to join the worker node to the master node
+# run the following commands on the master node
+# microk8s add-node
+# copy the output of the above command and run it on the worker node
