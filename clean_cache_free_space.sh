@@ -2,10 +2,10 @@
 pip cache list
 
 # Remove the cache
-pip cache purge | -y
+pip cache purge
 
 # Clean the conda packages
-conda clean --all | -y
+conda clean --all
 
 # Clean package cache
 sudo apt-get autoremove
