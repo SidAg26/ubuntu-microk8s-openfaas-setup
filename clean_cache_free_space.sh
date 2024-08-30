@@ -26,6 +26,8 @@ sudo rm -rf /var/tmp/*
 docker container prune -f
 docker image prune -a -f
 docker volume prune -f
+# Remove any unused Docker data
+docker system prune -a
 
 # Remove unused Snap packages
 sudo snap list --all | awk '/disabled/{print $1, $3}' | while read snapname revision; do sudo snap remove "$snapname" --revision="$revision"; done
